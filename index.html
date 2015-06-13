@@ -120,7 +120,7 @@ onsubmit="submitted=true;">
                         Prénom de l'élève :
                         <input id="apelPrenomEleve" type="text" name="prenomEleve" size="25px"><br><br>
                         Niveau et Classe de l'élève     (en septembre 2015):
-                        <select required="required" id="apelNiveauEleve" type="text" name="classe" style="margin-left:20px;">
+                        <select required="required" id="apelNiveauEleve" type="text" name="niveau" style="margin-left:20px;">
                             <option>-- Niveau --</option></select>
                         <select required="required"  id="apelClasseEleve" type="text" name="classe"><option >-- Classe --</option></select></select><br><br>
                         NOM des parents si différents :
@@ -133,7 +133,7 @@ onsubmit="submitted=true;">
                         <input id="apelMailParent" type="text" name="mail"size="47px"><br><br>
                         <div class="col-md-4" id=apelLotsChoisis style="padding-left:10px;border:solid grey 1px;">        
                         <h4>Lot(s) choisi(s):</h4><h4 id="apelLots"></h4>
-                            <h4 > Somme totale à régler <span id= "apelOrderAmount" name="Somme" style="font-size:140%;font-style:bold;margin-left:10px;">&euro;</span></h4><br>
+                            <h4 > Somme totale à régler <span id= "apelOrderAmount" name="Somme" style="font-size:140%;font-style:bold;margin-left:10px;"></span><span style="font-size:140%;font-style:bold;">&euro;</span></h4><br>
                 <p style="color:#DC3D67;">ATTENTION ne seront pas inclus dans la livraison les articles précédés d’une (*) sur les listes.<p>
                 <br>               
                         <input type="button" onclick="calcOrder()" id="apelCalcOrder" value="Calculer" style="margin-left:auto;background-color:#007FBE;color:white;"><input style="float: right;margin-left:10px;margin-right:10px;background-color:#007FBE;color:white;" type="reset" id="apelResetOrder" value="Reprendre">                </div>

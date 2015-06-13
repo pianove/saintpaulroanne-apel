@@ -130,8 +130,12 @@ function apelOpenPdf(e, classe) {
 var request;
 
 $(document).ready(function(){
+    
+    
     $('#apelPapOrder').submit(function(event) {
-        //$("#apelLots>input:checked").val("1");
+        
+        
+        
         postToGoogle();
         // Prevent default posting of form
         event.preventDefault();
@@ -206,7 +210,20 @@ function postToGoogle() {
     
     
  if (formValidation() === true) {
-    
+     
+     
+    $(":checkbox").each(function() {
+        if (this.checked){
+            this.value = 1;
+        }
+        else
+            this.value = 0;
+    });
+    $(":input").each(function() {
+            console.log(this.name);
+            console.log(this.value);
+    });
+     
     // Abort any pending request
     if (request) {
         request.abort();
@@ -228,7 +245,8 @@ function postToGoogle() {
     // Fire off the request to google spreadsheet
     request = $.ajax({
 //        url: "https://script.google.com/macros/s/AKfycbySoYYgOtwfegja7_CFQkB6tCg27xA51JwHJZ_gPV30E4XUhs8_/exec",
-        url:"https://script.google.com/macros/s/AKfycbySoYYgOtwfegja7_CFQkB6tCg27xA51JwHJZ_gPV30E4XUhs8_/exec",
+        //url:"https://script.google.com/macros/s/AKfycbySoYYgOtwfegja7_CFQkB6tCg27xA51JwHJZ_gPV30E4XUhs8_/exec",
+        url:"",
         type: "post",
         data: serializedData,
         crossDomain: true
@@ -247,6 +265,7 @@ function postToGoogle() {
             }
         });
         $("#apelOrderAmount").val(0);
+        $("#apelOrderAmount").text("");
         
     });
 
@@ -267,12 +286,8 @@ function postToGoogle() {
         $inputs.prop("disabled", false);
     });
  }
-else {
-    console.log("n'est pas bien rempli");
     
-}
-    
-}
+};
 
 /*
 $(document).ready(function(){
