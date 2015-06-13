@@ -246,7 +246,7 @@ function postToGoogle() {
     request = $.ajax({
 //        url: "https://script.google.com/macros/s/AKfycbySoYYgOtwfegja7_CFQkB6tCg27xA51JwHJZ_gPV30E4XUhs8_/exec",
         //url:"https://script.google.com/macros/s/AKfycbySoYYgOtwfegja7_CFQkB6tCg27xA51JwHJZ_gPV30E4XUhs8_/exec",
-        url:"",
+        url:"https://script.google.com/macros/s/AKfycbxpL6D9M_uRJGr5VfU2P_WAj5gElNwIAvQaJN89ieF8MS4v-Dws/exec",
         type: "post",
         data: serializedData,
         crossDomain: true
