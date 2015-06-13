@@ -1,0 +1,104 @@
+.clearfix {
+  overflow: auto;
+}
+
+*,
+body {
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  padding: 0;   
+}
+
+#apel-header {
+  font-family: 'Oswald', sans-serif;
+  margin: 0, 0, 0, 0;
+  color: #007FBE;
+  display: inline-flex;
+  text-align: center;
+}
+
+#apel-title {
+  font-family: 'Oswald', sans-serif;  
+  color: black;
+  text-transform: uppercase;
+  background-color:#cb6;
+  font-weight: 400;
+  text-align: center;
+}
+
+.apel-buttons {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button.apel-maternelle {
+  background-color: #dc3d67;
+  border-color: #dc3d67;
+  color: black;
+  margin: inherit;
+  display: block;
+}
+
+button.apel-elementaire {
+  background-color: darkorange;
+  border-color: darkorange;
+  color: black;
+  margin: inherit;
+  display: block;
+}
+
+button.apel-college {
+  background-color: #A4BB06;
+  border-color: #A4BB06; 
+  color: black;
+  margin: inherit;
+  display: block;
+}
+
+button.apel-maternelle:hover,
+button.apel-elementaire:hover,
+button.apel-college:hover,
+button.apel-maternelle:active,
+button.apel-elementaire:active,
+button.apel-college:active {
+    color: white;
+    background-origin: inherit;
+    background-image: none;
+    border-color: black;
+}
+
+.panel-title {
+    color: darkblue;
+    font-weight: 100;
+}
+
+#je-commande>.panel-body {
+/*    background-color: #cb6;*/
+/*    background-color:#d3c57c;*/
+    background-color:#ddcc71;
+}
+
+#apel-article>.panel-heading,
+#apel-article>.panel-title {
+    background-image:linear-gradient(to bottom,#007FBE,0,lightblue, 100% );
+    background-repeat: repeat-x;
+    border-color: darkblue;
+    padding: 5px;
+}
+@mediascreen (min-width: 992px)
+.apel-buttons {
+    width: 20%;
+}
+
+form  { 
+    display: table;
+}
+
+input {
+    display: table-cell;
+}
+
+[type=text] {
+    background-color:beige;
+}
