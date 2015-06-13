@@ -156,7 +156,7 @@ function calcOrder() {
     $(":checkbox").each(function() {
         
         if (this.checked === true) {
-        selLot.push(this.value);
+        selLot.push(this.name);
         }
     });    
     
@@ -173,7 +173,8 @@ function calcOrder() {
     }
     var formattedAmount = amount + ",00 ";
     $("#apelOrderAmount").val(amount);
-    $("#apelOrderAmount").text(formattedAmount + initText);
+    //$("#apelOrderAmount").text(formattedAmount + initText);
+    $("#apelOrderAmount").text(formattedAmount);
 };
 
 
@@ -190,18 +191,22 @@ list=[];
 list = classMatNames.concat(classEcNames).concat(classColNames);
 
 //append default lot a commander
-var HTMLlot1Names = '<label for="apelLot1" style="margin-left: 50px;">%name%</label><input id="apelLot1" type="checkbox" name="lotsChoisis" style="margin-left: 10px;" value ="%name%" /><br>';
+var HTMLlot1Names = '<label for="apelLot1" style="margin-left: 50px;">%name%</label><input id="apelLot1" type="checkbox" name="%name%" style="margin-left: 10px;" value ="%name%" /><br>';
 lotDefault = HTMLlot1Names.replace("%name%",lotNames[0]);
 lotDefault = lotDefault.replace("%name%",lotNames[0]);
+lotDefault = lotDefault.replace("%name%",lotNames[0]);
+
 $("#apelLots").append(lotDefault);
 // append optional lots
-HTMLlot2Names = '<label for="apelLot2" style="margin-left:50px;"><a style="color:black;" title= "pour CE1, CE2, CM1, CM2">%name%</label><input id="apelLot2" type="checkbox" name="lotsChoisis" style="margin-left: 118px;" value ="%name%" disabled="true"/><br>';
+HTMLlot2Names = '<label for="apelLot2" style="margin-left:50px;"><a style="color:black;" title= "pour CE1, CE2, CM1, CM2">%name%</label><input id="apelLot2" type="checkbox" name="%name%" style="margin-left: 118px;" value ="%name%" disabled="true"/><br>';
 lot2 = HTMLlot2Names.replace("%name%",lotNames[1]);
+lot2 = lot2.replace("%name%",lotNames[1]);
 lot2 = lot2.replace("%name%",lotNames[1]);
 $("#apelLots").append(lot2);
 
-HTMLlot3Names = '<label for="apelLot3" style="margin-left:50px;"><a style="color:black;" title= "pour CE1 et CE2">%name%<input id="apelLot3" type="checkbox" name="lotsChoisis" style="margin-left: 35px;" value ="%name%" disabled="true"/><br>';
+HTMLlot3Names = '<label for="apelLot3" style="margin-left:50px;"><a style="color:black;" title= "pour CE1 et CE2">%name%<input id="apelLot3" type="checkbox" name="%name%" style="margin-left: 35px;" value ="%name%" disabled="true"/><br>';
 lot3 = HTMLlot3Names.replace("%name%",lotNames[2]);
+lot3 = lot3.replace("%name%",lotNames[2]);
 lot3 = lot3.replace("%name%",lotNames[2]);
 $("#apelLots").append(lot3);
 
