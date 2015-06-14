@@ -175,6 +175,7 @@ function calcOrder() {
     $("#apelOrderAmount").val(amount);
     //$("#apelOrderAmount").text(formattedAmount + initText);
     $("#apelOrderAmount").text(formattedAmount);
+    $("#apelSommePost").val(amount);
 };
 
 
