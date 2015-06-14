@@ -266,6 +266,7 @@ function postToGoogle() {
         });
         $("#apelOrderAmount").val(0);
         $("#apelOrderAmount").text("");
+        $("#apelSommePost").val(0);
         
     });
 
