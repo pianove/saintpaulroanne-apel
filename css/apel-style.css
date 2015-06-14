@@ -95,9 +95,6 @@ form  {
     display: table;
 }
 
-input {
-    display: table-cell;
-}
 
 [type=text] {
     background-color:beige;
