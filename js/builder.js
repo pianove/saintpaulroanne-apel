@@ -129,16 +129,16 @@ function apelOpenPdf(e, classe) {
 
 var request;
 
-$(document).ready(function(){
-    
-    
-    $('#apelPapOrder').submit(function(event) {
-        
-        postToGoogle();
-        // Prevent default posting of form
-        event.preventDefault();
-    });
-});
+//$(document).ready(function(){
+//    
+//    
+//    $('#apelPapOrder').submit(function(event) {
+//        
+//        postToGoogle();
+//        // Prevent default posting of form
+//        event.preventDefault();
+//    });
+//});
 
 
 function postToGoogle() {
@@ -249,19 +249,18 @@ function postToGoogle() {
         //url:"https://script.google.com/macros/s/AKfycbySoYYgOtwfegja7_CFQkB6tCg27xA51JwHJZ_gPV30E4XUhs8_/exec",
         url:"https://script.google.com/macros/s/AKfycbxpL6D9M_uRJGr5VfU2P_WAj5gElNwIAvQaJN89ieF8MS4v-Dws/exec",
         data: serializedData,
-        crossDomain: true,
+        //crossDomain: true,
         //CHANGED ADDED
         //contentType: 'text/plain' ,
         //contentType: "multipart\/form-data; boundary=",
-        xhrFields: {
+        //xhrFields: {
         // The 'xhrFields' property sets additional fields on the XMLHttpRequest.
         // This can be used to set the 'withCredentials' property.
         // Set the value to 'true' if you'd like to pass cookies to the server.
         // If this is enabled, your server must respond with the header
         // 'Access-Control-Allow-Credentials: true'.
-        withCredentials: false,
-        //Access-Control-Allow-Origin: "https://docs.google.com" 
-        },
+       // withCredentials: false,
+        //},
     });
 
     // Callback handler that will be called on success
