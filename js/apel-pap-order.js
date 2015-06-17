@@ -46,9 +46,11 @@ var classColNames = [
 ];
 
 var lotNames = [
-    "1 Lot Fournitures Scolaires",
+    "1 lot Fournitures scolaires",
     "1 Dictionnaire",
-    "Livres étudiés en classe"
+    "Livres étudiés en classe",
+    "1 lot PAPETERIE",
+    "1 lot MATERIEL"
 ];
 
  var levelNames = [
@@ -56,6 +58,7 @@ var lotNames = [
         'Elementaire',
         'Collège'];
 
+var HTMLoptionName = '<option value="%val%">%data%</option>';
 Classe.prototype.display = function(myLevel) {
     if (myLevel === this.level) {
         var el = HTMLoptionName.replace("%data%", this.name);
@@ -97,18 +100,18 @@ for (i = 0; i < list.length; i++) {
 };
 
 
-var articlePricesLotDefault = 20;
-var articlePricesLotLivresc1 = 30;
-var articlePricesLotLivresc2 = 25;
+//var articlePricesLotDefault = 0.99;
+var articlePricesLotLivresc1 = 9.99;
+var articlePricesLotLivresc2 = 9.99;
 var articlePriceDico = 15;
 var allArticles = [];
-for (i = 0; i < all.length; i++) {
-    article = new Article();
-    article.articleClass = all[i].name;
-    article.articleLotName = lotNames[0];
-    article.articleLotPrice = articlePricesLotDefault; 
-    allArticles.push(article);
-};
+//for (i = 0; i < all.length; i++) {
+//    article = new Article();
+//    article.articleClass = all[i].name;
+//    article.articleLotName = lotNames[0];
+//    article.articleLotPrice = articlePricesLotDefault; 
+//    allArticles.push(article);
+//};
 
 // create article for CE1 - livres
     article = new Article();
@@ -146,6 +149,116 @@ for (i = 0; i < all.length; i++) {
     article.articleLotName = lotNames[1];
     article.articleLotPrice = articlePriceDico;
     allArticles.push(article);
+// create article for 6e - PAP
+    article = new Article();
+    article.articleClass = classColNames[0];
+    article.articleLotName = lotNames[3];
+    article.articleLotPrice = 40;
+    allArticles.push(article);
+// create article for 6e - MAT
+    article = new Article();
+    article.articleClass = classColNames[0];
+    article.articleLotName = lotNames[4];
+    article.articleLotPrice = 25;
+    allArticles.push(article);
+// create article for 6e HR - PAP
+    article = new Article();
+    article.articleClass = classColNames[1];
+    article.articleLotName = lotNames[3];
+    article.articleLotPrice = 38;
+    allArticles.push(article);
+// create article for 6e HR - MAT
+    article = new Article();
+    article.articleClass = classColNames[1];
+    article.articleLotName = lotNames[4];
+    article.articleLotPrice = 25;
+    allArticles.push(article);
+// create article for 6e SEGPA - PAP
+    article = new Article();
+    article.articleClass = classColNames[2];
+    article.articleLotName = lotNames[3];
+    article.articleLotPrice = 18;
+    allArticles.push(article);
+// create article for 6e SEGPA - MAT
+    article = new Article();
+    article.articleClass = classColNames[2];
+    article.articleLotName = lotNames[4];
+    article.articleLotPrice = 25;
+    allArticles.push(article);
+// create article for 5e - PAP
+    article = new Article();
+    article.articleClass = classColNames[3];
+    article.articleLotName = lotNames[3];
+    article.articleLotPrice = 35;
+    allArticles.push(article);
+// create article for 5e - MAT
+    article = new Article();
+    article.articleClass = classColNames[3];
+    article.articleLotName = lotNames[4];
+    article.articleLotPrice = 25;
+    allArticles.push(article);
+// create article for 5e SEGPA - PAP
+    article = new Article();
+    article.articleClass = classColNames[4];
+    article.articleLotName = lotNames[3];
+    article.articleLotPrice = 20;
+    allArticles.push(article);
+// create article for 5e SEGPA - MAT
+    article = new Article();
+    article.articleClass = classColNames[4];
+    article.articleLotName = lotNames[4];
+    article.articleLotPrice = 26;
+    allArticles.push(article);
+// create article for 4e - PAP
+    article = new Article();
+    article.articleClass = classColNames[5];
+    article.articleLotName = lotNames[3];
+    article.articleLotPrice = 30;
+    allArticles.push(article);
+// create article for 4e - MAT
+    article = new Article();
+    article.articleClass = classColNames[5];
+    article.articleLotName = lotNames[4];
+    article.articleLotPrice = 22;
+    allArticles.push(article);
+// create article for 4e SEGPA - PAP
+    article = new Article();
+    article.articleClass = classColNames[6];
+    article.articleLotName = lotNames[3];
+    article.articleLotPrice = 25;
+    allArticles.push(article);
+// create article for 4e SEGPA - MAT
+    article = new Article();
+    article.articleClass = classColNames[6];
+    article.articleLotName = lotNames[4];
+    article.articleLotPrice = 18;
+    allArticles.push(article);
+// create article for 3e - PAP
+    article = new Article();
+    article.articleClass = classColNames[7];
+    article.articleLotName = lotNames[3];
+    article.articleLotPrice = 33;
+    allArticles.push(article);
+// create article for 3e - MAT
+    article = new Article();
+    article.articleClass = classColNames[7];
+    article.articleLotName = lotNames[4];
+    article.articleLotPrice = 22;
+    allArticles.push(article);
+// create article for 3e SEGPA - PAP
+    article = new Article();
+    article.articleClass = classColNames[8];
+    article.articleLotName = lotNames[3];
+    article.articleLotPrice = 25;
+    allArticles.push(article);
+// create article for 3e SEGPA - MAT
+    article = new Article();
+    article.articleClass = classColNames[8];
+    article.articleLotName = lotNames[4];
+    article.articleLotPrice = 21;
+    allArticles.push(article);
+
+
 // to store only euro sign
 var initText = $("#apelOrderAmount").text();
 function calcOrder() {
@@ -180,7 +293,7 @@ function calcOrder() {
 
 
 
-var HTMLoptionName = '<option value="%val%">%data%</option>';
+
 list = levelNames;
 for (i = 0; i < list.length; i++) {
     var el = HTMLoptionName.replace("%data%", list[i]);
@@ -192,7 +305,7 @@ list=[];
 list = classMatNames.concat(classEcNames).concat(classColNames);
 
 //append default lot a commander
-var HTMLlot1Names = '<label for="apelLot1" style="margin-left: 5%;display:inline;">%name%</label><input id="apelLot1" type="checkbox" name="%name%" style="margin-left: 10px;" value ="%name%" /><br>';
+var HTMLlot1Names = '<label for="apelLot1" style="margin-left: 5%;display:inline;">%name%</label><input id="apelLot1" type="checkbox" name="%name%" style="margin-left: 10px;" value ="%name%" disabled="true"/><br>';
 lotDefault = HTMLlot1Names.replace("%name%",lotNames[0]);
 lotDefault = lotDefault.replace("%name%",lotNames[0]);
 lotDefault = lotDefault.replace("%name%",lotNames[0]);
@@ -211,6 +324,17 @@ lot3 = lot3.replace("%name%",lotNames[2]);
 lot3 = lot3.replace("%name%",lotNames[2]);
 $("#apelLots").append(lot3);
 
+HTMLlot4Names = '<label for="apelLot4" style="margin-left:5%;display:inline;"><a style="color:black;" title= "pour Collège">%name%<input id="apelLot4" type="checkbox" name="%name%" style="margin-left: 35px;" value ="%name%" disabled="true"/><br>';
+lot4 = HTMLlot4Names.replace("%name%",lotNames[3]);
+lot4 = lot4.replace("%name%",lotNames[3]);
+lot4 = lot4.replace("%name%",lotNames[3]);
+$("#apelLots").append(lot4);
+
+HTMLlot5Names = '<label for="apelLot5" style="margin-left:5%;display:inline;"><a style="color:black;" title= "pour Collège">%name%<input id="apelLot5" type="checkbox" name="%name%" style="margin-left: 35px;" value ="%name%" disabled="true"/><br>';
+lot5 = HTMLlot5Names.replace("%name%",lotNames[4]);
+lot5 = lot5.replace("%name%",lotNames[4]);
+lot5 = lot5.replace("%name%",lotNames[4]);
+$("#apelLots").append(lot5);
 
 $("apelLot1").attr("onchange",function() {
     
@@ -223,11 +347,28 @@ $("apelLot1").attr("onchange",function() {
 $("#apelNiveauEleve").attr("onchange","selectMyClasse()");
 function selectMyClasse() {
      var myLevel = $("#apelNiveauEleve").val();
-    if (myLevel === "Collège" || "Maternelle"){
-        $("#apelLot2").prop("checked", false);
-        $("#apelLot2").prop("disabled", true);
-        $("#apelLot3").prop("disabled", true);
-        $("#apelLot3").prop("checked", false);   
+    switch (myLevel) {
+        case "Collège":
+            $("#apelLot1").prop("checked", false);
+            $("#apelLot1").prop("disabled", true);
+            $("#apelLot2").prop("checked", false);
+            $("#apelLot2").prop("disabled", true);
+            $("#apelLot3").prop("disabled", true);
+            $("#apelLot3").prop("checked", false);
+            $("#apelLot4").prop("disabled", false);
+            $("#apelLot5").prop("disabled", false);
+        //Maternelle
+        default:
+            $("#apelLot1").prop("checked", false);
+            $("#apelLot1").prop("disabled", true);
+            $("#apelLot2").prop("checked", false);
+            $("#apelLot2").prop("disabled", true);
+            $("#apelLot3").prop("disabled", true);
+            $("#apelLot3").prop("checked", false);
+            $("#apelLot4").prop("checked", false);
+            $("#apelLot4").prop("disabled", true);
+            $("#apelLot5").prop("disabled", true);
+            $("#apelLot5").prop("checked", false);
     }
             $("#apelClasseEleve").empty();
             all.forEach(function (classe) {
@@ -247,49 +388,56 @@ function selectMyLot() {
     //$("#apelLots").empty();
     
     var selClass = $("#apelClasseEleve").val();
-    switch (selClass) {
-      case 'CE1':
-      case 'CE2':
-        //last = lotNames.length;   
-        //$("#apelLot2").text(lotNames[1]);
-        
-        $("#apelLot2").prop("disabled", false);
-        $("#apelLot2").prop("checked", false);
-            
-        //$("#apelLot3").text (lotNames[2]);    
-        $("#apelLot3").prop("disabled", false);
-        $("#apelLot3").prop("checked", false);
-        break;
-     /* case 'CE2':
-        last = lotNames.length;
-           break;*/
-      case 'CM1':
-      case 'CM2':
-        //last = lotNames.length - 1;
-        //$("#apelLot2").text(lotNames[1]);  
-        $("#apelLot2").prop("disabled", false);
-        //$("#apelLot3").text = "";
-        $("#apelLot3").prop("disabled", true);
-        $("#apelLot3").prop( "checked", false );
-        break;
-      default:
-        //$("#apelLot2").text = "";  
-        //$("#apelLot2").empty();   
-        $("#apelLot2").prop("checked", false);
-        $("#apelLot2").prop("disabled", true);
-        
-        //$("#apelLot3").text = "";
-        $("#apelLot3").prop("disabled", true);
-        $("#apelLot3").prop("checked", false);   
-        //$("#apelLot3").prop( "checked", false );
-        break;
-     }
-   /* for (i = 0; i < last; i++) {
-        
-        var el = HTMLlotNames.replace("%name%",lotNames[i]);
-        el = el.replace("%name%",lotNames[i]);
-        $("#apelLots").append(el);    
-    }*/
+    if ($("#apelNiveauEleve").val() === "Elementaire") {
+        switch (selClass) {
+          case 'CE1':
+          case 'CE2':
+            //last = lotNames.length;   
+            //$("#apelLot2").text(lotNames[1]);
+
+            $("#apelLot2").prop("disabled", false);
+            $("#apelLot2").prop("checked", false);
+
+            //$("#apelLot3").text (lotNames[2]);    
+            $("#apelLot3").prop("disabled", false);
+            $("#apelLot3").prop("checked", false);
+            break;
+         /* case 'CE2':
+            last = lotNames.length;
+               break;*/
+          case 'CM1':
+          case 'CM2':
+            //last = lotNames.length - 1;
+            //$("#apelLot2").text(lotNames[1]);  
+            $("#apelLot2").prop("disabled", false);
+            //$("#apelLot3").text = "";
+            $("#apelLot3").prop("disabled", true);
+            $("#apelLot3").prop( "checked", false );
+            break;
+          default:
+            $("#apelLot2").prop("checked", false);
+            $("#apelLot2").prop("disabled", true);
+            $("#apelLot3").prop("disabled", true);
+            $("#apelLot3").prop("checked", false);
+            $("#apelLot4").prop("checked", false);
+            $("#apelLot4").prop("disabled", true);
+            $("#apelLot5").prop("disabled", true);
+            $("#apelLot5").prop("checked", false);
+            break;
+         }    
+    }
+    else {
+        if ($("#apelNiveauEleve").val() === "Collège") {
+            $("#apelLot1").prop("checked", false);
+            $("#apelLot1").prop("disabled", true);
+            $("#apelLot2").prop("checked", false);
+            $("#apelLot2").prop("disabled", true);
+            $("#apelLot3").prop("disabled", true);
+            $("#apelLot3").prop("checked", false);
+            $("#apelLot4").prop("disabled", false);
+            $("#apelLot5").prop("disabled", false);
+        }
+    }
 };
 
 $("#apelNomEleve" )
