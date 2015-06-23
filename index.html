@@ -103,6 +103,69 @@
           </div>
           <div id="je-commande" class="panel-collapse collapse in">
             <div class="panel-body">
+<!--
+                <div id="apel-order-form"></div>
+                    
+-->
+<!--                    <script type="text/javascript">var submitted=false;</script>-->
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">
+                <a data-toggle="collapse" data-parent="#je-commande" href="#apel-ecole"><span class="glyphicon glyphicon-collapse-down"></span> Ecole</a></h2>
+          </div>
+          <div id="apel-ecole" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <div id="apel-order-form"></div>
+                    
+                    <script type="text/javascript">var submitted=false;</script>
+                    
+<!--
+                    <form id="apelPapOrder" action="https://docs.google.com/spreadsheets/d/1jXEWZc-vV5EnB0oNpWbsTDWei-ZeAwO9WARq_L3hsgc" method="post" target="apel_hidden_iframe" 
+onsubmit="submitted=true;">
+-->
+                <form id="apelPapOrder" action = "https://script.google.com/macros/s/AKfycbxpL6D9M_uRJGr5VfU2P_WAj5gElNwIAvQaJN89ieF8MS4v-Dws/exec" method="post" target="_blank" onsubmit="submitted=true" >
+<!--                <form id="apelPapOrder">-->
+      <img alt="Logo" src="images/apelfournscologotransparent.jpg" width= "200px" height="220px" style="float:right;"></img>              <h4 style="color:#007FBE;font-style:italic;">Remplir une commande par élève.</h4>
+                        <input id="Timestamp" style="display: none;" name="Timestamp">
+                        NOM de l'élève :
+                        <input id="apelNomEleve" type="text" name="nomEleve" size="30px">
+                        Prénom de l'élève :
+                        <input id="apelPrenomEleve" type="text" name="prenomEleve" size="25px"><br><br>
+                        Niveau et Classe de l'élève     (en septembre 2015):
+                        <select required="required" id="apelNiveauEleve" type="text" name="niveau" style="margin-left:20px;">
+                            <option>-- Niveau --</option></select>
+                        <select required="required"  id="apelClasseEleve" type="text" name="classe"><option >-- Classe --</option></select></select><br><br>
+                        NOM des parents si différents :
+                        <input id="apelNomParent" type="text" name="nomParent" size="41px"><br><br>
+                        Adresse complète :
+                        <input id="apelAdresseParent" type="text" name="adresse" size="52px"><br><br>
+                        Tél. :
+                        <input id="apelTelParent" type="tel" name="tel"size="10" style ="margin-right: 12px;" placeholder="0123456789">
+                        Votre mail:
+                        <input id="apelMailParent" type="text" name="mail"size="47px"><br><br>
+                        <div class="col-md-4" id=apelLotsChoisis style="padding-left:10px;border:solid grey 1px;">        
+                        <h4>Lot(s) choisi(s):</h4><h4 id="apelLots"></h4>
+                            <input id="apelSommePost" style="display: none;" name="Somme">
+                            <h4 > Somme totale à régler <span id= "apelOrderAmount" name="Somme1" style="font-size:140%;font-style:bold;margin-left:10px;"></span><span style="font-size:140%;font-style:bold;">&euro;</span></h4><br>
+                <p style="color:#DC3D67;">ATTENTION ne seront pas inclus dans la livraison les articles précédés d’une (*) sur les listes.<p>
+                <br>               
+                        <input type="button" onclick="calcOrder()" id="apelCalcOrder" value="Calculer" style="margin-left:auto;background-color:#007FBE;color:white;"><input style="float: right;margin-left:10px;margin-right:10px;background-color:#007FBE;color:white;" type="reset" id="apelResetOrder" value="Reprendre">                </div>
+                <div class="col-md-8" id=apelOrderTerms  style="font-style:bold;"><h4 style="text-align:center;">MODALITES DE REGLEMENT</h4><li>Ne seront pas prises en compte les commandes non accompagnées de leur règlement.</li><li>Votre chèque devra être libellé à l’ordre de l’APEL et  sera encaissé dès le 7 septembre 2015.</li><li>Votre commande, accompagnée de votre règlement devra nous parvenir avant le 31 JUILLET.</li><li> Le collège étant fermé, votre règlement devra être transmise IMPERATIVEMENT à l’adresse suivante :</li><br><h4 style="text-align:center;">MME AGULLO FERRATON MAGALIE<br>5 RUE DES AQUEDUCS<br>42300 ROANNE</h4>
+                        </div>
+                <p style="font-style:bold;text-align:center;">Les lots commandés seront à retirer au collège : <br>le samedi 29 août de 9H à 12H<br>LES LOTS NON RETIRES seront  à récupérer à l'accueil le jour de la rentrée.</p>
+              <input id="apelPlaceOrder" type="submit" style="float:right;font-size: 20px; background-color:#DC3D67;color:white;margin-bottom:10px;" value="Valider">
+                </form>
+<!--            <iframe name="apel_hidden_iframe" id="apel_hidden_iframe" style="display:none;" onload="if(submitted) {alert('APEL ST.PAUL AQUEDUCS vous remercie pour votre commande et vous souhaite de tres bonnes vacances!');}"></iframe>-->
+             </div> 
+          </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">
+                <a data-toggle="collapse" data-parent="#je-commande" href="#apel-college"><span class="glyphicon glyphicon-collapse-down"></span> Collège</a></h2>
+          </div>
+          <div id="apel-college" class="panel-collapse collapse in">
+            <div class="panel-body">
                 <div id="apel-order-form"></div>
                     
                     <script type="text/javascript">var submitted=false;</script>
@@ -147,6 +210,7 @@ onsubmit="submitted=true;">
 <!--            <iframe name="apel_hidden_iframe" id="apel_hidden_iframe" style="display:none;" onload="if(submitted) {alert('APEL ST.PAUL AQUEDUCS vous remercie pour votre commande et vous souhaite de tres bonnes vacances!');}"></iframe>-->
              </div> 
           </div>
+
         </div> 
      </div>
   </div>
