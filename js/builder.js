@@ -129,16 +129,16 @@ function apelOpenPdf(e, classe) {
 
 var request;
 
-//$(document).ready(function(){
-//    
-//    
-//    $('#apelPapOrder').submit(function(event) {
-//        
-//        postToGoogle();
-//        // Prevent default posting of form
-//        event.preventDefault();
-//    });
-//});
+$(document).ready(function(){
+    
+    
+    $('#apelPapOrder').submit(function(event) {
+        
+        postToGoogle();
+        // Prevent default posting of form
+        event.preventDefault();
+    });
+});
 
 
 function postToGoogle() {
@@ -246,7 +246,6 @@ function postToGoogle() {
     // Fire off the request to google spreadsheet
     request = $.ajax({
         type: "post",
-        //url:"https://script.google.com/macros/s/AKfycbySoYYgOtwfegja7_CFQkB6tCg27xA51JwHJZ_gPV30E4XUhs8_/exec",
         url:"https://script.google.com/macros/s/AKfycbxpL6D9M_uRJGr5VfU2P_WAj5gElNwIAvQaJN89ieF8MS4v-Dws/exec",
         data: serializedData,
         //crossDomain: true,
