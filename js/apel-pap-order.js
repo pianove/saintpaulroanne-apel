@@ -551,7 +551,6 @@ function refEnable() {
     }
 }
 
-
 $("#apelEcoleNiveauEleve").attr("onchange","selectMyClasse()");
 function selectMyClasse() {
      var myLevel = $("#apelEcoleNiveauEleve").val();

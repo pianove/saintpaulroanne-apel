@@ -148,7 +148,8 @@ onsubmit="submitted=true;">
                         <div id=apelEcoleLotsChoisis style="padding-left:10px;border:solid grey 1px;">        
                         <h4>Lot(s) choisi(s):</h4><h4 id="apelEcoleLots"></h4>
                             <div style="margin-left:5%;" >Réf couleur:<input id="apelEcoleRefCouleur" name="Ref Couleur" size="5px" type='text' disabled>
-                                Réf écriture: <input id="apelEcoleRefEcri" name="Ref Ecriture" size="5px" type="text" disabled>Réf dessin:<input id="apelEcoleRefDessin" name="Ref Dessin" size="5px" type='text'disabled></div>
+                                Réf écriture: <input id="apelEcoleRefEcri" name="Ref Ecriture" size="5px" type="text" disabled>Réf dessin:<input id="apelEcoleRefDessin" name="Ref Dessin" size="5px" type='text'disabled><a href="#apelRefAide" name="modal" title="Cliquez ici pour consulter les références" style="margin-left:5px;" data-toggle="modal" data-target="#apelRefAide">aide</a>
+</div>
                             <input id="apelEcoleSommePost" style="display: none;" name="Somme">
                             <h4 > Somme totale à régler <span id= "apelEcoleOrderAmount" name="Somme1" style="font-size:140%;font-style:bold;margin-left:10px;"></span><span style="font-size:140%;font-style:bold;">&euro;</span></h4><br>
                 <p style="color:#DC3D67;">ATTENTION ne seront pas inclus dans la livraison les articles précédés d’une (*) sur les listes.<p>
@@ -216,14 +217,23 @@ onsubmit="submitted=true;">
 
         </div> 
      </div>
+<!-- Modal -->
+  <div class="modal fade" id="apelRefAide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+       <div class="modal-content">
+          <img class="img-responsive" src="images/apel_etiquette.jpg" alt="Références">
+           </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+          </div>
+       </div>
+    </div>
+  </div>
   </div>
 <!--</div>-->
 
 <script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
 <script>$('.collapse').collapse()</script>
-<script>
-
-</script>
 <script src="js/apel-pap-order.js"></script>
 </body>
 </html>
