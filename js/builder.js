@@ -1,3 +1,26 @@
+//function apelOpenPdf(e, classe) {
+//    var file = [
+//        '/sites/default/files/pdfpreview/pass.pdf',
+//        '/sites/default/files/pdfpreview/ps.pdf',
+//        '/sites/default/files/pdfpreview/ms.pdf',
+//        '/sites/default/files/pdfpreview/gs.pdf',
+//        '/sites/default/files/pdfpreview/cp.pdf',
+//        '/sites/default/files/pdfpreview/ce1.pdf',
+//        '/sites/default/files/pdfpreview/ce2.pdf',
+//        '/sites/default/files/pdfpreview/cm1.pdf',
+//        '/sites/default/files/pdfpreview/cm2.pdf',
+//        '/sites/default/files/pdfpreview/clis.pdf',
+//        '/sites/default/files/pdfpreview/6e.pdf',
+//        '/sites/default/files/pdfpreview/6e-segpa.pdf',
+//        '/sites/default/files/pdfpreview/6e-hr.pdf',
+//        '/sites/default/files/pdfpreview/5e.pdf',
+//        '/sites/default/files/pdfpreview/5e-segpa.pdf',
+//        '/sites/default/files/pdfpreview/4e.pdf',
+//        '/sites/default/files/pdfpreview/4e-segpa.pdf',
+//        '/sites/default/files/pdfpreview/3e.pdf',
+//        '/sites/default/files/pdfpreview/3e-segpa.pdf'
+//    ],
+
 function apelOpenPdf(e, classe) {
     var file = [
         'images/pass.pdf',

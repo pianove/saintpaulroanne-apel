@@ -43,6 +43,8 @@
 <!--       <img alt="colis" src="images/colis_small.jpg" style="float:left;"></img>-->
         Profitez pleinement de vos vacances en commandant maintenant les fournitures scolaires de votre enfant.
      <img alt="apel st. paul aqueducs logo" src="images/IMG_0298.JPG" width="203px" height="118px"></img>
+<!--path when upload to mothersite-->
+<!-- <img alt="apel st. paul aqueducs logo" src="/sites/default/files/pictures/img_0298.jpg" style="width: 203px; height: 118px;" />-->
     </div>
     <div id="apel-article" class="row" style="display: block;">
     
@@ -124,6 +126,7 @@ onsubmit="submitted=true;">
 -->
 <!--                <form id="apelEcolePapOrder" action = "https://script.google.com/macros/s/AKfycby6pY00cMsmW4zRcZfPK_VpsskE7cS9EwTw69hPMLngFJLYLb8n/exec" method="post" target="_blank" onsubmit="submitted=true" >-->
                 <form id="apelEcolePapOrder" >
+<!--                    <img alt="Logo" src="/sites/default/files/pictures/apelfournscologotransparent.jpg" style="float: right; width: 200px; height: 220px;" />-->
       <img alt="Logo" src="images/apelfournscologotransparent.jpg" width= "200px" height="220px" style="float:right;"></img>              <h4 style="color:#007FBE;font-style:italic;">Remplir une commande par élève.</h4>
                         <input id="EcoleTimestamp" style="display: none;" name="Timestamp">
                         NOM de l'élève :
@@ -198,7 +201,7 @@ onsubmit="submitted=true;">
                         <div class="col-md-4" id=apelColLotsChoisis style="padding-left:10px;border:solid grey 1px;">        
                         <h4>Lot(s) choisi(s):</h4><h4 id="apelColLots"></h4>
                             <input id="apelColSommePost" style="display: none;" name="Somme">
-                            <h4 > Somme totale à régler <span id= "apelColOrderAmount" name="Somme1" style="font-size:140%;font-style:bold;margin-left:10px;"></span><span style="font-size:140%;font-style:bold;">&euro;</span></h4><br>
+                            <h4 > Somme totale à régler <span id= "apelColOrderAmount" name="Somme1" style="font-size:120%;font-style:bold;margin-left:10px;"></span><span style="font-size:140%;font-style:bold;">&euro;</span></h4><br>
                 <p style="color:#DC3D67;">ATTENTION ne seront pas inclus dans la livraison les articles précédés d’une (*) sur les listes.<p>
                 <br>               
                         <input type="button" onclick="calcColOrder()" id="apelColCalcOrder" value="Calculer" style="margin-left:auto;background-color:#007FBE;color:white;"><input style="float: right;margin-left:10px;margin-right:10px;background-color:#007FBE;color:white;" type="reset" id="apelColResetOrder" value="Reprendre">                </div>
