@@ -392,7 +392,6 @@ var article;
     article.articleLotPrice = 21;
     allArticles.push(article);
 
-
 // to store only euro sign
 var initText = $("#apelEcoleOrderAmount").text();
 function calcEcoleOrder() {
@@ -557,7 +556,7 @@ function selectMyClasse() {
     switch (myLevel) {
         case "Elementaire":
             $("#apelLot1").prop("checked", false);
-            $("#apelLot1").prop("disabled", true);
+            $("#apelLot1").prop("disabled", false);
             $("#apelLot2").prop("checked", false);
             $("#apelLot2").prop("disabled", true);
             $("#apelLot3").prop("disabled", true);
@@ -672,6 +671,8 @@ function selectMyLot() {
             $("#apelLot8").prop("checked", false);
             break;
           default:
+            $("#apelLot1").prop("checked", false);
+            $("#apelLot1").prop("disabled", false);
             $("#apelLot2").prop("checked", false);
             $("#apelLot2").prop("disabled", true);
             $("#apelLot3").prop("disabled", true);
